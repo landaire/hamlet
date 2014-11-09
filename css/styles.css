@@ -1,3 +1,19 @@
+/* line 1, ../scss/styles.scss */
 .text-center {
-    text-align: center;
+  text-align: center;
+}
+
+/* line 5, ../scss/styles.scss */
+.padding-top-10 {
+  padding-top: 10px;
+}
+
+/* line 9, ../scss/styles.scss */
+.gold-star {
+  color: gold;
+}
+
+/* line 15, ../scss/styles.scss */
+#search-results #users .username {
+  font-size: 12pt;
 }
