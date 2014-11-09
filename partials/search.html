@@ -1,0 +1,22 @@
+<div id="search-results" ng-controller="SearchCtrl">
+    <div id="listings">
+        <div class="page-header">
+            <h3>Listings</h3>
+        </div>
+    </div>
+    <div id="users">
+        <div class="page-header">
+            <h3>People</h3>
+        </div>
+        <div class="col-sm-4 text-center" ng-repeat="user in users">
+            <div class="row">
+                <a href="/#/profile/{{user.fname}}" class="username">{{user.fname}} {{user.lname}}</a>
+            </div>
+            <div class="row">
+                <a href="/#/profile/{{user.fname}}">
+                    <img src="http://lorempixel.com/200/250/people?nocache={{$index}}">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

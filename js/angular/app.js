@@ -40,16 +40,57 @@ app.controller('MainCtrl', function ($scope) {
 
 });
 
+app.controller('HowItWorksCtrl', function ($scope) {
+
+});
+
 app.controller('PostCtrl', function ($scope) {
 
 });
 
-app.controller('SearchCtrl', function ($scope) {
-
+app.controller('SearchCtrl', function ($scope, $http) {
+    $http.get('/js/data.json').then(function(response) {
+        $scope.users = response.data;
+    });
 });
 
-app.controller('ProfileCtrl', function ($scope, $routeParams) {
+app.controller('ProfileCtrl', function ($scope, $routeParams, $http) {
+    $http.get('/js/data.json').then(function(response) {
+        var profiles = response.data;
+        $scope.user = profiles.filter(function(user) {
+            return user.fname == $routeParams.id;
+        })[0];
 
+        for (var i = 0; i < $scope.user.listings.length; i++) {
+            var stars = [],
+                starCount = 0;
+
+            for (starCount = 0; starCount < $scope.user.listings[i].rating; starCount++) {
+                stars.push('glyphicon glyphicon-star');
+            }
+
+            for (var j = starCount; j < 5; j++) {
+                stars.push('glyphicon glyphicon-star-empty');
+            }
+
+            $scope.user.listings[i].stars = stars;
+        }
+        $scope.user.listings.forEach(function(listing) {
+
+        });
+    });
+
+    $scope.getUserAverageRating = function() {
+        var ratingTotal = 0;
+
+        $scope.user.listings.forEach(function(listing) {
+            ratingTotal += listing.rating;
+        });
+
+        console.log(ratingTotal);
+
+        return ratingTotal / $scope.user.listings.length;
+    };
 });
 
 app.config(['$routeProvider',
@@ -60,8 +101,8 @@ app.config(['$routeProvider',
                 controller: 'MainCtrl'
             }).
             when('/search', {
-                templateUrl: 'partials/phone-detail.html',
-                controller: 'PhoneDetailCtrl'
+                templateUrl: 'partials/search.html',
+                controller: 'SearchCtrl'
             }).
             when('/post', {
                 templateUrl: 'partials/post.html',
@@ -70,6 +111,10 @@ app.config(['$routeProvider',
             when('/profile/:id', {
                 templateUrl: 'partials/profile.html',
                 controller: 'ProfileCtrl'
+            }).
+            when('/how-it-works', {
+                templateUrl: 'partials/how_it_works.html',
+                controller: 'HowItWorksCtrl'
             }).
             otherwise({
                 redirectTo: '/'
