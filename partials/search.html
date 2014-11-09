@@ -1,21 +1,39 @@
-<div id="search-results" ng-controller="SearchCtrl">
-    <div id="listings">
-        <div class="page-header">
-            <h3>Listings</h3>
-        </div>
-    </div>
-    <div id="users">
-        <div class="page-header">
-            <h3>People</h3>
-        </div>
-        <div class="col-sm-4 text-center" ng-repeat="user in users">
-            <div class="row">
-                <a href="/#/profile/{{user.fname}}" class="username">{{user.fname}} {{user.lname}}</a>
+<div class="container">
+    <div id="search-results" ng-controller="SearchCtrl">
+        <div id="listings">
+            <div class="page-header">
+                <h3>Listings</h3>
             </div>
-            <div class="row">
-                <a href="/#/profile/{{user.fname}}">
-                    <img src="http://lorempixel.com/200/250/people?nocache={{$index}}">
-                </a>
+            <div class="row" ng-repeat="listing in listings">
+                <div class="well">
+                    <h3>{{listing.title}} <small>by <a href="/#/profile/{{listing.user.fname}}">{{listing.user.fname}} {{listing.user.lname}}</a></small>
+                        <span class="pull-right">
+                            <span ng-repeat="star in listing.stars track by $index">
+                                <i class="gold-star {{star}}"></i>
+                            </span>
+                        </span>
+                    </h3>
+                    <p>{{listing.description}}</p>
+                    <p>
+                        Cost: ${{listing.cost / 100}}
+                        <a href="#" class="btn btn-primary pull-right">Sign Up</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="users">
+            <div class="page-header">
+                <h3>People</h3>
+            </div>
+            <div class="col-sm-4 text-center" ng-repeat="user in users">
+                <div class="row">
+                    <a href="/#/profile/{{user.fname}}" class="username">{{user.fname}} {{user.lname}}</a>
+                </div>
+                <div class="row">
+                    <a href="/#/profile/{{user.fname}}">
+                        <img src="http://lorempixel.com/200/250/people?nocache={{$index}}">
+                    </a>
+                </div>
             </div>
         </div>
     </div>

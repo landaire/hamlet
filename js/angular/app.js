@@ -48,13 +48,31 @@ app.controller('PostCtrl', function ($scope) {
 
 });
 
+app.controller('NavSearchFormCtrl', function ($scope, $location) {
+    $scope.redirectToSearch = function() {
+        $location.path('/search');
+    }
+});
+
 app.controller('SearchCtrl', function ($scope, $http) {
     $http.get('/js/data.json').then(function(response) {
         $scope.users = response.data;
+        $scope.listings = [];
+
+        $scope.users.forEach(function(user) {
+            user.listings.forEach(function(listing) {
+                listing.user = user;
+                $scope.listings.push(listing);
+            })
+        });
     });
 });
 
 app.controller('ProfileCtrl', function ($scope, $routeParams, $http) {
+    $scope.getUserAverageRating = function () {
+        return '';
+    };
+
     $http.get('/js/data.json').then(function(response) {
         var profiles = response.data;
         $scope.user = profiles.filter(function(user) {
@@ -75,22 +93,17 @@ app.controller('ProfileCtrl', function ($scope, $routeParams, $http) {
 
             $scope.user.listings[i].stars = stars;
         }
-        $scope.user.listings.forEach(function(listing) {
 
-        });
+        $scope.getUserAverageRating = function() {
+            var ratingTotal = 0;
+
+            $scope.user.listings.forEach(function(listing) {
+                ratingTotal += listing.rating;
+            });
+
+            return ratingTotal / $scope.user.listings.length;
+        };
     });
-
-    $scope.getUserAverageRating = function() {
-        var ratingTotal = 0;
-
-        $scope.user.listings.forEach(function(listing) {
-            ratingTotal += listing.rating;
-        });
-
-        console.log(ratingTotal);
-
-        return ratingTotal / $scope.user.listings.length;
-    };
 });
 
 app.config(['$routeProvider',
