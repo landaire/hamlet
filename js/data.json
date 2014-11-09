@@ -1,5 +1,54 @@
 [
   {
-
+    "fname": "John",
+    "lname": "Smith",
+    "teaching": "Welding",
+    "about": "I've been a commercial welder for 20 years and have recently retired.",
+    "listings": [
+      {
+        "title": "I will teach you how to weld!",
+        "description": "I have a 1500 square ft shop with plenty of time on my hands! I would love to teach someone -- no matter what their background -- how to weld and my welding secrets!",
+        "cost": 1000,
+        "rating": 5
+      },
+      {
+        "title": "Advanced Welding",
+        "description": "For people who have been welding for a while but still don't feel like they've got what it takes to do professionally. I'm the guy to show you the tricks of the trade and get you prepped for your first job!",
+        "cost": 1000,
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "fname": "Robert",
+    "lname": "Sevilla Naudon",
+    "teaching": "stuff",
+    "about": "Here are some things about Robert",
+    "listings": [
+      {
+        "title": "Learn to craft metal chandeliers!",
+        "description": "This class will cover it all. Metal casting and black smithing, electrical wiring, and fun! I have free time on the weekends to teach anyone willing to learn from scratch.",
+        "cost": 5000,
+        "rating": 5
+      }
+    ],
+    "etsy": [
+      "/images/robert/etsy/Aspen Chandelier-1589.jpg",
+      "/images/robert/etsy/IMG_0190.JPG",
+      "/images/robert/etsy/IMG_0875-2.jpg",
+      "/images/robert/etsy/IMG_5492.jpg",
+      "/images/robert/etsy/IMG_5496.jpg",
+      "/images/robert/etsy/Photo Jun 16 2 10 50 PM.png",
+      "/images/robert/etsy/RSN_0009.jpg",
+      "/images/robert/etsy/RSN_0017.jpg",
+      "/images/robert/etsy/RSN_3902.jpg",
+      "/images/robert/etsy/RSN_4232-2.jpg",
+      "/images/robert/etsy/RSN_8423.jpg",
+      "/images/robert/etsy/RSN_8689-2.jpg",
+      "/images/robert/etsy/Robert Sevilla Naudon Mombacho Pendant Lights-6218.jpg",
+      "/images/robert/etsy/Robert Sevilla Naudon Mombacho Pendant Lights-6289-2.jpg",
+      "/images/robert/etsy/_DSC3780-2.jpg",
+      "/images/robert/etsy/_DSC3784-2.jpg"
+    ]
   }
 ]
