@@ -3,20 +3,34 @@
  */
 var app = angular.module('hamlet', ['ui.bootstrap', 'ngRoute', 'ngStorage']);
 
+app.filter('nl2br', function($sce){
+    return function(text) {
+        return $sce.trustAsHtml(text.replace(/\n/g, '<br>'));
+    };
+});
+
 // Controller for the nav bar
 app.controller('CategoriesCtrl', function ($scope) {
     $scope.items = [
         {
-            route: '#',
-            text: 'First'
+            route: '/#/search',
+            text: 'Black Smithing'
         },
         {
-            route: '#',
-            text: 'Second'
+            route: '/#/search',
+            text: 'Furniture Building'
         },
         {
-            route: '#',
-            text: 'Third'
+            route: '/#/search',
+            text: 'Metals'
+        },
+        {
+            route: '/#/search',
+            text: 'Art'
+        },
+        {
+            route: '/#/search',
+            text: 'Cars'
         }
     ];
 

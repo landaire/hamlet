@@ -25,13 +25,14 @@
             <div class="page-header">
                 <h3>People</h3>
             </div>
-            <div class="col-sm-4 text-center" ng-repeat="user in users">
+            <div class="col-sm-3 text-center padding-bottom-10" ng-repeat="user in users">
                 <div class="row">
                     <a href="/#/profile/{{user.fname}}" class="username">{{user.fname}} {{user.lname}}</a>
                 </div>
                 <div class="row">
                     <a href="/#/profile/{{user.fname}}">
-                        <img src="http://lorempixel.com/200/250/people?nocache={{$index}}">
+                        <img src="http://lorempixel.com/200/250/people?nocache={{$index}}" ng-if="!user.image">
+                        <img src="{{user.image}}" width="200" height="250" ng-if="user.image">
                     </a>
                 </div>
             </div>

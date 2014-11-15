@@ -1,9 +1,10 @@
 [
   {
-    "fname": "John",
-    "lname": "Smith",
+    "fname": "Douglas",
+    "lname": "Werner",
     "teaching": "Welding",
-    "about": "I've been a commercial welder for 20 years and have recently retired.",
+    "bio": "Raised in France and working in Brooklyn, Douglas Werner, owner and master fabricator at Oblik Studio Incorporated makes custom, ready-made freestanding furniture and accessories. These pieces are made from sustainably sourced or reclaimed metals, primarily steel, aluminum, stainless steel, bronze, brass and copper. He uses his own creativity in designing and fabricating luxury furnishings with clean, modern lines and a strong, old time, vintage feel.\n\n“Growing up on the rustic coastline of Brittany, I was always fascinated with the corroding effects of time and the elements on metals. Beaches and coves are marked with the natural patina of steel, copper, bronze and aluminum wrecks left behind by maritime history,” says Douglas Werner. Oblik thrives to express the sensitive experience and beauty of exposed aging metal and the stories that it tells.\n\nOblik Studio combines functionality with modern and historical lines while using and combining different metals whenever possible. Working and dealing with the constraints of such tough and versatile materials can be a challenge, as well as an inspiration. My goal is to grow my business without sacrificing my strong belief in working locally and with unique highly detailed craftsmanship.\nEach piece is unique, and variations may occur in color and texture due to the nature of the materials.",
+    "image": "/images/douglas/220px-Wessel_smedbager02.jpg",
     "listings": [
       {
         "title": "I will teach you how to weld!",
@@ -17,13 +18,20 @@
         "cost": 1000,
         "rating": 4
       }
+    ],
+    "etsy": [
+      "/images/douglas/30942.141501.jpg",
+      "/images/douglas/30942.141502.jpg",
+      "/images/douglas/30942.171327.jpg",
+      "/images/douglas/30942.491021.jpg"
     ]
   },
   {
     "fname": "Robert",
     "lname": "Sevilla Naudon",
-    "teaching": "stuff",
-    "about": "Here are some things about Robert",
+    "teaching": "Artistic Welding",
+    "bio": "Robert Sevilla Naudon designs & fabricates architectural metals. I primarily create custom lighting designed by myself or by designers looking for UL rated lighting. I have been making a living thru art since 1989 & feel very privileged to be able to do so. I live in the Pacific Northwest with my wife & two boys. Everything I make is either Made-To-Order, or a One-Off prototype. If you are interested in design consultation contact me thru this website.\n\nSharing what I know is a natural part of the trade I am involved in. Without the help & the wisdom of my teachers I would not be where I am today…. I would be there in 5 years. Typically Hamlet Seekers are looking for an experience & not so much a class per se.\n\nFor example, some Seekers may ask:\nto help complete a project they have started\nto start a new project\njust ask questions\n\nIf you are coming to my shop in Spokane WA and want to weld you will need to bring the following:\nLong sleeve cotton shirts\nLong denim pants\nLeather Boots\nGloves\nComfortable safety googles, you will be wearing them the entire time you are in the shop\n\nIf you are coming with a project in mind, bring all supplies needed with you. Meaning, if your project is made of steel then bring the steel. ",
+    "image": "/images/robert/image.tiff",
     "listings": [
       {
         "title": "Learn to craft metal chandeliers!",
@@ -49,6 +57,52 @@
       "/images/robert/etsy/Robert Sevilla Naudon Mombacho Pendant Lights-6289-2.jpg",
       "/images/robert/etsy/_DSC3780-2.jpg",
       "/images/robert/etsy/_DSC3784-2.jpg"
+    ]
+  },
+  {
+    "fname": "Carley",
+    "lname": "Eisenberg",
+    "bio": "Iron Mountain Forge is run by blacksmith, Carley Eisenberg, and is nestled in the mountains of Western North Carolina. She can design and forge anything from small hook racks and bottle openers to tables and rocking chairs. Though mainly focusing in steel, she is able to do some pieces in wood and glass as well.\nCarley graduated from Miami University of Ohio with a Bachelors in Fine Arts in Interior Design with a concentration in Furniture Design. After spending some time making cabinets, she attended Rhode Island School of Design and received her Masters in Furniture Design with a concentration in metal.",
+    "teaching": "Blacksmithing",
+    "image": "/images/carley/Diemer_Profile_Sparks.jpg",
+    "listings": [
+      {
+        "title": "Sword Smithing",
+        "description": "Learn how how to cast and smith a sword with me. Iron Mountain Forge has a great forge that is available for our use, allowing us to have some of the best tools and environment to learn in.",
+        "cost": 7500,
+        "rating": 5
+      }
+    ],
+    "etsy": [
+      "/images/carley/167084.512985.jpg",
+      "/images/carley/167084.512989.jpg",
+      "/images/carley/167084.512994.jpg",
+      "/images/carley/167084.512995.jpg",
+      "/images/carley/167084.513006.jpg",
+      "/images/carley/167084.877228.jpg",
+      "/images/carley/167084.877234.jpg",
+      "/images/carley/167084.877237.jpg"
+    ]
+  },
+  {
+    "fname": "Darin",
+    "lname": "Wicks",
+    "bio": "Metalsmiths Darin Wicks & Brian Martin, working with iron, copper, steel, bronze, and stainless steel, among others to create unique lighting, furniture and architectural works.",
+    "teaching": "Metalsmithing",
+    "image": "/images/darin/Indy-Star-Article-6-24-2010.jpg",
+    "listings": [
+      {
+        "title": "Create Metal Furniture",
+        "description": "Brian and I are willing to teach anyone how to create metal furniture.",
+        "cost": 2000,
+        "rating": 3
+      }
+    ],
+    "etsy": [
+      "/images/darin/90350.248563.jpg",
+      "/images/darin/90350.256321.jpg",
+      "/images/darin/90350.256322.jpg",
+      "/images/darin/90350.490538.jpg"
     ]
   }
 ]

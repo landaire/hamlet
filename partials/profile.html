@@ -1,8 +1,11 @@
 <div class="container">
     <div ng-controller="ProfileCtrl">
         <div class="row">
-            <div class="col-sm-2">
+            <div class="col-sm-2" ng-if="!user.image">
                 <img src="http://lorempixel.com/150/150/people">
+            </div>
+            <div class="col-sm-2" ng-if="user.image">
+                <img src="{{user.image}}" style="max-width:100%">
             </div>
             <div class="col-sm-10">
                 <div class="page-header">
@@ -14,33 +17,40 @@
             <div class="col-sm-3">
                 <div class="panel panel-info">
                     <div class="panel-heading">
-                        <h3 class="panel-title">About John</h3>
+                        <h3 class="panel-title">About {{user.fname}}</h3>
                     </div>
                     <div class="panel-body">
                         <table class="table table-hover">
                             <tbody>
-                                <tr>
-                                    <th>Currently teaching</th>
-                                    <td>{{user.teaching}}</td>
-                                </tr>
-                                <tr>
-                                    <th>Average Rating</th>
-                                    <td>{{getUserAverageRating()}} out of 5</td>
-                                </tr>
-                                <tr>
-                                    <th>Contact</th>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th><i class="glyphicon glyphicon-envelope"></i></th>
-                                    <td><a href="#">Email</a></td>
-                                </tr>
+                            <tr>
+                                <th>Currently teaching</th>
+                                <td>{{user.teaching}}</td>
+                            </tr>
+                            <tr>
+                                <th>Average Rating</th>
+                                <td>{{getUserAverageRating()}} out of 5</td>
+                            </tr>
+                            <tr>
+                                <th>Contact</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th><i class="glyphicon glyphicon-envelope"></i></th>
+                                <td><a href="#">Email</a></td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
             <div class="col-sm-9">
+                <h3>Bio</h3>
+                <p ng-bind-html="user.bio | nl2br">
+                </p>
+            </div>
+        </div>
+        <div class="row padding-top-10">
+            <div class="col-sm-12">
                 <div class="row" ng-repeat="listing in user.listings track by $id(listing)">
                     <div class="well">
                         <h3>{{listing.title}}

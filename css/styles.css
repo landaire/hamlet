@@ -1,19 +1,70 @@
-/* line 1, ../scss/styles.scss */
+/* line 3, ../scss/styles.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 5, ../scss/styles.scss */
+/* line 7, ../scss/styles.scss */
 .padding-top-10 {
   padding-top: 10px;
 }
 
-/* line 9, ../scss/styles.scss */
+/* line 11, ../scss/styles.scss */
+.padding-bottom-10 {
+  padding-bottom: 10px;
+}
+
+/* line 15, ../scss/styles.scss */
 .gold-star {
   color: gold;
 }
 
-/* line 15, ../scss/styles.scss */
+/* line 21, ../scss/styles.scss */
 #search-results #users .username {
   font-size: 12pt;
+}
+
+/* line 27, ../scss/styles.scss */
+#main-page-jumbotron {
+  background-image: url("/images/home_jumbo_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+@media screen and (max-width: 767px) {
+  /* line 27, ../scss/styles.scss */
+  #main-page-jumbotron {
+    background-size: auto 100%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* line 27, ../scss/styles.scss */
+  #main-page-jumbotron {
+    height: 500px;
+  }
+}
+/* line 40, ../scss/styles.scss */
+#main-page-jumbotron h3.tagline {
+  text-shadow: -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white, 1px 1px 1px white;
+}
+
+/* line 48, ../scss/styles.scss */
+.main-page-image {
+  width: 250px;
+}
+
+/* line 52, ../scss/styles.scss */
+.nav-image {
+  width: 50px;
+  height: 50px;
+}
+
+/* line 57, ../scss/styles.scss */
+.navbar-brand {
+  top: -10px;
+  position: relative;
+}
+
+/* line 72, ../scss/styles.scss */
+#how-it-works-footnote {
+  font-size: 8pt;
 }
